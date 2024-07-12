@@ -1,0 +1,27 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+
+hub = PrimeHub()
+
+# Initialize both motors. In this example, the motor on the
+# left must turn counterclockwise to make the robot go forward.
+
+motorA = Motor(Port.A, Direction.COUNTERCLOCKWISE)
+motorB = Motor(Port.B)
+
+left_motor = motorA
+right_motor = motorB
+
+# Initialize the drive base. In this example, the wheel diameter is 54mm.
+# The distance between the two wheel-ground contact points is 114mm.
+
+DB=DriveBase(left_motor, right_motor, 54, 114)
+
+#for x in range (5): is a repeat
+for x in range (5):
+#for this code I am making a star
+    DB.straight(200)
+    DB.turn(144)
